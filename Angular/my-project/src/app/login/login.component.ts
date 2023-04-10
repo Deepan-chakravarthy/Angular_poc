@@ -16,4 +16,13 @@ export class LoginComponent {
   signup(){
     this.router.navigate(['/signup']);
   }
+
+  loginObj : any = {
+    email : "",
+    password : ""
+  }
+
+  login(){
+
+  }
 }
