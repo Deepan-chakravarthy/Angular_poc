@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -8,6 +9,10 @@ import { Component } from '@angular/core';
 export class SignupComponent {
 
   signupUsers : any[] = [];
+
+  constructor(private router : Router){
+
+  }
 
   signupObj : any = {
     username : "",
@@ -19,7 +24,6 @@ export class SignupComponent {
   onSignup(){
     this.signupUsers.push(this.signupObj);
     localStorage.setItem("signupUsers", JSON.stringify(this.signupUsers));
+    this.router.navigate(["/login"])
   }
-
-
 }

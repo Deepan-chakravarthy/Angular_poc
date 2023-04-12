@@ -25,7 +25,8 @@ export class LoginComponent implements OnInit {
   login(){
     const isUserExist  = this.signupUsers.find((m: { email: any; password: any; }) => m.email == this.loginObj.email && m.password == this.loginObj.password);
     if(isUserExist != undefined){
-      alert("user logged in successfully")
+      // alert("user logged in successfully")
+      this.router.navigate(['/home'])
     } else {
       alert("Invalid credentials");
     }
