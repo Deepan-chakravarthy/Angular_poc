@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './service/auth.guard';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
